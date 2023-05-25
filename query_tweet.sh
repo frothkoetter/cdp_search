@@ -1,0 +1,19 @@
+export SOLRUSER=frothkoetter
+export SOLRPWD='XXXXXXXXX'
+
+export SOLRURL='http://itz-search-demo-workerwithzookeeper0.se-sandb.a465-9q4k.cloudera.site:2181/itz-search-demo/cdp-proxy-api/solr/airlinedata_tweets/select?q=airport:BOS'
+export SOLRURL='https://itz-search-demo-workerwithzookeeper0.se-sandb.a465-9q4k.cloudera.site:8985/itz-search-demo/cdp-proxy-api/solr/airlinedata_tweets/select?q=airport:BOS'
+# export SOLRURL='https://itz-search-demo-gateway.se-sandb.a465-9q4k.cloudera.site/itz-search-demo/cdp-proxy-api/solr/airlinedata_tweets/select?q=airport:BOS'
+
+curl --user $SOLRUSR:$SOLRPWD -vk $SOLRURL 
+curl --user $SOLRUSR:$SOLRPWD $SOLRURL 
+
+ 
+export TOKENPWD='WlRnMllXRTRNbU10Wmpaa1pDMDBZVGRrTFRrNE1qRXRNemN3WW1FM04yUmpaRGt4OjpNalUwTmpobU16a3ROVE5oTkMwME5qQmtMVGd5T0dZdE9UbGpaVFV5TkRjeFpXSm0='
+export TOKEN=eyJqa3UiOiJodHRwczpcL1wvaXR6LXNlYXJjaC1kZW1vLWdhdGV3YXkuc2Utc2FuZGIuYTQ2NS05cTRrLmNsb3VkZXJhLnNpdGVcL2l0ei1zZWFyY2gtZGVtb1wvaG9tZXBhZ2VcL2tub3h0b2tlblwvYXBpXC92MVwvandrcy5qc29uIiwia2lkIjoiQmNXb0s1aVBEMTRPaTZ4bVloMHVvX2gxSXlOU2MzYUl1c2pOb29sVzRfcyIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJmcm90aGtvZXR0ZXIiLCJhdWQiOiJjZHAtcHJveHktdG9rZW4iLCJqa3UiOiJodHRwczpcL1wvaXR6LXNlYXJjaC1kZW1vLWdhdGV3YXkuc2Utc2FuZGIuYTQ2NS05cTRrLmNsb3VkZXJhLnNpdGVcL2l0ei1zZWFyY2gtZGVtb1wvaG9tZXBhZ2VcL2tub3h0b2tlblwvYXBpXC92MVwvandrcy5qc29uIiwia2lkIjoiQmNXb0s1aVBEMTRPaTZ4bVloMHVvX2gxSXlOU2MzYUl1c2pOb29sVzRfcyIsImlzcyI6IktOT1hTU08iLCJleHAiOjE2ODQ5MjY1NzQsIm1hbmFnZWQudG9rZW4iOiJ0cnVlIiwia25veC5pZCI6ImU4NmFhODJjLWY2ZGQtNGE3ZC05ODIxLTM3MGJhNzdkY2Q5MSJ9.G77GXR8O2A3HV9kUy2H70f8ZLP1zFckXw0xIU-POIRUyeN1f0_ILltCemmCl3ti8dG9GuEs6nRwjO0mnqmtG5Opq6r46o4c4U-JN13mwfEsA5_aUa_R0haj4QwsYwe7cavl1hKRXlDl0cxYi2sI5eJwcuu-KkRmA0e4S9lH2rg8kEfrVbyw3Wdfb2X_TP6hdLApNYW5_yJQ62cP22XRKdG1a-3fGY4RuHYw97GxhMuIXUsG07zvkzAZps8BM9WFWOjaU14gdux0-3kMbyuMJQXjoUkEt1jEYA2aZduCM6-2AkFY9Gk3PjLNUTxLNjUe7I4Ts9YEZLOSCdeEmaGvCuA
+
+curl --oauth2-bearer $TOKEN $SOLRURL
+
+curl -H "Authorization: OAuth "$TOKEN $SOLRURL 
+
+
